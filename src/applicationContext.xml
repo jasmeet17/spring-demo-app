@@ -45,7 +45,7 @@
     
     <!-- define dependency -->
     <!--  inject the dependency using "constructor injection"-->
-    <bean id="myFootballCoach" class="com.spring.demo.FootballCoach">
+    <bean id="myFootballCoach" class="com.spring.demo.FootballCoach" scope="singleton">
     <!-- constructor dependency injection -->
     	<constructor-arg ref="myRandomFortuneService"></constructor-arg>
     </bean>
