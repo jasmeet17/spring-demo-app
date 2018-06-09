@@ -24,6 +24,7 @@ public class HelloSpringApp {
 		
 		System.out.println("Cricket Email: " + criCoach.getEmail());
 		System.out.println("Cricket Team: " + criCoach.getTeam());
+		System.out.println("Cricket Team Owner: " + criCoach.getOwner());
 		
 		//close the context
 		context.close();
