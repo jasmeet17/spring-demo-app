@@ -21,7 +21,11 @@
     	<property name="fortuneService" ref="myFortuneService"></property>
     <!-- inject literal values -->
     	<property name="email" value="jasmeet17@github.com"></property>
-    	<property name="team" value="jas"></property>
+    	
+   	<!-- <property name="team" value="jas"></property> because we cannot have multiple property definitions  -->
+    <!-- reference values from properties file -->
+    	<property name="team" value="${foo.team}"></property>
+    	<property name="owner" value="${foo.owner}"></property>
     </bean>
     
     <!--  define the bean-->
