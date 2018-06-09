@@ -9,11 +9,13 @@
 
     <!-- Define your beans here -->
     <bean id="myCoach" class="com.spring.demo.TrackCoach">
+    <!-- constructor dependency injection -->
     	<constructor-arg ref="myFortuneService"></constructor-arg>
     </bean>
     
     <bean id="myCricketCoach" class="com.spring.demo.CricketCoach">
-    	<constructor-arg ref="myFortuneService"></constructor-arg>
+    <!-- setter dependency injection -->
+    	<property name="fortuneService" ref="myFortuneService"></property>
     </bean>
     
     <!--  define the bean-->
@@ -21,8 +23,9 @@
     </bean>
     
     <!-- define dependency -->
-    <!--  inject the dependecy using "constructor injection"-->
+    <!--  inject the dependency using "constructor injection"-->
     <bean id="myBaseballCoach" class="com.spring.demo.BaseballCoach">
+    <!-- constructor dependency injection -->
     	<constructor-arg ref="myFortuneService"></constructor-arg>
     </bean>
     

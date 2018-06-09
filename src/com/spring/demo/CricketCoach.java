@@ -5,7 +5,12 @@ public class CricketCoach implements Coach {
 	//define private field for dependency 
 	private FortuneService fortuneService;
 	
-	public CricketCoach(FortuneService fortuneService) {
+	public CricketCoach() {
+		System.out.println("Inside Cricket constructor.");
+	}
+	
+	//dependency injection using setter method	
+	public void setFortuneService(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}
 
@@ -17,7 +22,7 @@ public class CricketCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		return this.fortuneService.getFortune();
+		return "Cricket:" + this.fortuneService.getFortune();
 	}
 
 }
