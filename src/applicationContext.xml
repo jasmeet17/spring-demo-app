@@ -16,6 +16,9 @@
     <bean id="myCricketCoach" class="com.spring.demo.CricketCoach">
     <!-- setter dependency injection -->
     	<property name="fortuneService" ref="myFortuneService"></property>
+    <!-- inject literal values -->
+    	<property name="email" value="jasmeet17@github.com"></property>
+    	<property name="team" value="jas"></property>
     </bean>
     
     <!--  define the bean-->
