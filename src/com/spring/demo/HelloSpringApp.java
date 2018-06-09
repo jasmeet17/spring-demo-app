@@ -13,6 +13,7 @@ public class HelloSpringApp {
 		Coach theCoach = context.getBean("myCoach", Coach.class);
 		CricketCoach criCoach = context.getBean("myCricketCoach", CricketCoach.class);
 		Coach baseBallCoach = context.getBean("myBaseballCoach", Coach.class);
+		Coach footBallCoach = context.getBean("myFootballCoach", Coach.class);
 		
 		//call methods on the bean
 		System.out.println(theCoach.getDailyWorkout());
@@ -25,6 +26,9 @@ public class HelloSpringApp {
 		System.out.println("Cricket Email: " + criCoach.getEmail());
 		System.out.println("Cricket Team: " + criCoach.getTeam());
 		System.out.println("Cricket Team Owner: " + criCoach.getOwner());
+		
+		System.out.println("Football Fortune: " + footBallCoach.getDailyFortune());
+		System.out.println("Football Workout: " + footBallCoach.getDailyWorkout());
 		
 		//close the context
 		context.close();

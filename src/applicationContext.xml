@@ -39,6 +39,20 @@
     	<constructor-arg ref="myFortuneService"></constructor-arg>
     </bean>
     
+    <!--  define the bean-->
+    <bean id="myRandomFortuneService" class="com.spring.demo.RandomFortuneService">
+    </bean>
+    
+    <!-- define dependency -->
+    <!--  inject the dependency using "constructor injection"-->
+    <bean id="myFootballCoach" class="com.spring.demo.FootballCoach">
+    <!-- constructor dependency injection -->
+    	<constructor-arg ref="myRandomFortuneService"></constructor-arg>
+    </bean>
+    
+    
+    
+    
 </beans>
 
 
