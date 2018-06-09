@@ -6,6 +6,7 @@ public class CricketCoach implements Coach {
 	private FortuneService fortuneService;
 	private String email;
 	private String team;
+	private String owner;
 	
 	public String getEmail() {
 		return email;
@@ -27,6 +28,14 @@ public class CricketCoach implements Coach {
 		System.out.println("Inside Cricket constructor.");
 	}
 	
+	public String getOwner() {
+		return owner;
+	}
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+
 	//dependency injection using setter method	
 	public void setFortuneService(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
