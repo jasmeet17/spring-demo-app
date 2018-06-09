@@ -4,7 +4,25 @@ public class CricketCoach implements Coach {
 	
 	//define private field for dependency 
 	private FortuneService fortuneService;
+	private String email;
+	private String team;
 	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getTeam() {
+		return team;
+	}
+
+	public void setTeam(String team) {
+		this.team = team;
+	}
+
 	public CricketCoach() {
 		System.out.println("Inside Cricket constructor.");
 	}
